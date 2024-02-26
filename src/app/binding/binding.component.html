@@ -1,0 +1,91 @@
+<!--Event Binding-->
+
+<button (click)="onclick()">Click</button>
+
+
+<div>
+    <table>
+        <thead>
+            <tr [attr.colspan]='colspan'>
+                <th>{{pageHeader}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="showpropdetails">
+                <td  >Property Name</td>
+                <td>{{propertyName}}</td>
+            </tr>
+            <tr *ngIf="showpropdetails">
+                <td >Property Price</td>
+                <td>{{price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<button (click)="toggle()">{{showpropdetails ? 'Hide':'show'}}</button>
+
+<!-- Style Binding
+
+
+    
+
+    <div>
+        <button [ngStyle]="AddStyle()">Style Binding</button>
+    
+    <br>
+    <br>
+    <button style="background-color:yellow ">Styless</button>
+    
+    </div>
+
+
+
+Class Binding
+<button [ngClass]="AddClasses()">Click Me</button>
+
+<button class="colors boldclass italicclass">Submit</button>
+
+-->
+
+
+
+
+
+
+
+
+<!-- Attribute Binding
+
+<div>
+    <table>
+        <thead>
+            <tr [attr.colspan]='colspan'>
+                <th>{{pageHeader}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td [attr.rowspan]='rowspan'>Property Name</td>
+                <td>{{propertyName}}</td>
+            </tr>
+            <tr>
+                <td>Property Price</td>
+                <td>{{price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+ Property Binding
+<div>
+    <h1>Property Details</h1>
+    Property Name : <span [innerText]="propertyName"></span>
+    Price:<span [innerText]="price"></span>
+    <img [src]="imagePath">
+   
+</div>
+
+-->

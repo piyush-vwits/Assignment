@@ -1,0 +1,18 @@
+
+<div>
+    <h1>User Details</h1>
+    <!--Property Binding-->
+    User Name : <span *ngIf="showpropdetails" [ngStyle]="AddNameStyle()" [innerText]="name"></span>
+    <br>
+    Email Address: <span *ngIf="showpropdetails" [ngStyle]="AddEmailStyle()" [innerText]="email"></span>
+    <br>
+    <!--Event Binding-->
+    <button (click)="editUser()">Edit</button>
+    <br>
+    <!--Two-way Binding-->
+    <input type="text" placeholder="Change Name" [(ngModel)]="newName">
+    <p>Change Name : {{newName}}</p>
+
+    <br>
+    <button (click)="toggleDetails()">{{showpropdetails ? 'Hide':'show'}}</button>
+</div>
